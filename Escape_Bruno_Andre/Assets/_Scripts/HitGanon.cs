@@ -6,15 +6,15 @@ public class HitGanon : MonoBehaviour
 {
     GameManager gm;
 
+    AudioSource audioSource = gameObject.GetComponent<AudioSource>();
     void Start()
     {
         gm = GameManager.GetInstance();
     }
 
-    void Update()
-    {
+    private void OnCollisionEnter(Collision other) {
         if (gm.gameState == GameManager.GameState.GAME){
-            
+            audioSource.Stop();
         }
     }
 }
