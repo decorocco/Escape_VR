@@ -11,7 +11,7 @@ public class ComecarJogo : MonoBehaviour
         gm = GameManager.GetInstance();
     }
 
-    private void Comecarclick() 
+    public void Comecarclick() 
     {
         gm.ChangeState(GameManager.GameState.GAME);
     }
